@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Date Estimator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Order Delivery Date Estimator</h1>
+        <form id="delivery-form">
+            <label for="order-date">Order Date:</label>
+            <input type="date" id="order-date" required>
+
+            <label for="unstitched-blouse">Unstitched Blouse (Days):</label>
+            <input type="number" id="unstitched-blouse" min="0" placeholder="Enter days" required>
+
+            <label for="stitched-blouse">Stitched Blouse (Days):</label>
+            <input type="number" id="stitched-blouse" min="0" placeholder="Enter days">
+
+            <label for="wrap-on-saree">Wrap-on Saree (Days):</label>
+            <input type="number" id="wrap-on-saree" min="0" placeholder="Enter days">
+
+            <button type="button" onclick="calculateDeliveryDate()">Get Estimated Delivery</button>
+        </form>
+
+        <div id="estimated-delivery">
+            <p><strong>Estimated Delivery Date:</strong> <span id="delivery-date"></span></p>
+            <p id="delivery-breakdown"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
